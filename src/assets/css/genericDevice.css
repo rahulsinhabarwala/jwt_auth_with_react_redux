@@ -1,0 +1,1055 @@
+@import "variable.css";
+@media only screen {
+    /* configure device */
+    ul.deviceAttributeConfig {
+        list-style: none;
+        min-height: 250px;
+        overflow-y: auto;
+        padding: 0;
+    }
+    ul.deviceAttributeConfig li {
+        position: relative;
+        margin-bottom: 12px;
+        border-radius: 5px;
+        padding: 8px 75px 8px 10px;
+        border-bottom: 1px solid var(--borderColor);
+    }
+    ul.deviceAttributeConfig li .checkboxLabel {
+        padding-left: 40px;
+        font-size: 0.98em;
+    }
+    ul.deviceAttributeConfig li .btn-link {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+        font-size: 12px;
+    }
+    .deviceAttributeConfigLoader i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* end configure device */
+
+    /* config device form */
+    .addDeviceForm {
+        padding-right: 320px;
+        position: relative;
+    }
+    .devicePreviewBox {
+        border: 2px dashed var(--borderColor);
+        height: 100%;
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        cursor: pointer;
+    }
+    .devicePreviewBox input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .devicePreviewBox p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: var(--contentColor);
+        font-size: 14px;
+        text-align: center;
+    }
+    .devicePreviewImage {
+        width: 100%;
+        height: 100%;
+        transition: all ease-in-out 0.3s;
+    }
+    .devicePreviewImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding: 5px;
+    }
+    .devicePreviewIcon img {
+        width: 50%;
+        height: 50%;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .devicePreviewOverlay {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 1;
+        z-index: 2;
+        transition: all ease-in-out 0.3s;
+    }
+    .devicePreviewOverlay h6 {
+        color: var(--whiteColor);
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        font-weight: 600;
+    }
+    .devicePreviewOverlay h6 i {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .devicePreviewImage:hover .devicePreviewOverlay {
+        opacity: 1;
+        transition: all ease-in-out 0.3s;
+    }
+    .addDevicePreview {
+        position: relative !important;
+        width: 100%;
+        height: calc(100% - 50px);
+        max-height: 275px;
+    }
+    /* end config device form */
+
+    /* dashboard counters */
+    ul.dashboardCount {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    ul.dashboardCount li {
+        position: relative;
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding: 0 5px;
+    }
+    ul.dashboardCount li:first-child {
+        padding-left: 0;
+    }
+    ul.dashboardCount li:last-child {
+        padding-right: 0;
+    }
+    .dashboardCountDetail {
+        background-color: var(--whiteColor);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 7px 20px;
+        position: relative;
+    }
+    .dashboardCountDetail h4 {
+        color: var(--themeColor);
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .dashboardCountDetail h4 small {
+        margin-left: 10px;
+        font-size: 13px;
+        color: var(--textColor);
+        font-weight: 600;
+        opacity: 1;
+    }
+    .dashboardCountDetail p {
+        font-size: 14px;
+        color: var(--textColor);
+        margin: 0;
+    }
+    .dashboardCountIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+    .dashboardCountIcon i {
+        font-size: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--whiteColor);
+    }
+    .dashboardCountGraph {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    /* end dashboard counter*/
+
+    /* dashboard map */
+    .mapView {
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #fff;
+        height: 470px;
+    }
+    .dashboardMapView {
+        height: 417px;
+    }
+    .dashboardMapView .hierarchyBadgeList label::before {
+        display: none;
+    }
+    .dashboardMapView .hierarchyBadgeList {
+        margin: 5px 10px 12px 10px;
+    }
+    .mapViewLoader {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+    }
+    .mapViewLoaderContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .mapViewLoaderContent i {
+        margin-bottom: 10px;
+        font-size: 28px;
+        color: var(--themeColor);
+    }
+    .mapViewLoaderContent p {
+        color: var(--contentColor);
+    }
+    .gm-style .gm-style-iw-c {
+        padding: 15px 15px 20px !important;
+        max-height: none !important;
+    }
+    .gm-style .gm-style-iw-d {
+        overflow: initial !important;
+        max-height: none !important;
+    }
+    .gm-ui-hover-effect {
+        top: 5px !important;
+        right: 5px !important;
+        background: #e2e2e2 !important;
+        opacity: 1;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .gm-ui-hover-effect img {
+        margin: 0 auto !important;
+        height: 18px !important;
+        width: 18px !important;
+    }
+    .mapMarker {
+        min-height: 280px;
+        max-height: 350px;
+        min-width: 300px;
+        overflow-y: auto;
+    }
+    .mapMarkerHeader {
+        margin-bottom: 10px;
+        background-color: #e3f9fc;
+        padding: 10px;
+    }
+    .mapMarkerHeader h5 {
+        font-size: 15px;
+        color: var(--orange);
+        margin-bottom: 7px;
+    }
+    .mapMarkerHeader p {
+        font-size: 12px;
+        margin-bottom: 3px;
+        color: var(--blue);
+    }
+    .mapMarkerHeader p:last-of-type {
+        margin-bottom: 0;
+    }
+    .mapMarkerHeader p span {
+        color: var(--textColor);
+        margin-right: 7px;
+    }
+    .mapMarker table tbody tr td {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    .mapMarker table tbody tr td:first-child {
+        text-transform: capitalize;
+    }
+    .mapMarker .btn-link {
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        font-size: 0.94em;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    .mapMarker .btn-link i {
+        margin-left: 2px;
+    }
+    .dashboardDeviceList {
+        height: 318px;
+        overflow-y: auto;
+    }
+    .dashboardDeviceList ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .dashboardDeviceList ul li {
+        padding: 5px 20px 3px 45px;
+        margin-bottom: 3px;
+        border-bottom: 1px solid var(--borderColor);
+        border-radius: 5px;
+        transition: all ease-in-out 0.3s;
+        position: relative;
+    }
+    .dashboardDeviceList ul li:hover {
+        background-color: #e3f9fc;
+        border-bottom-width: 2px;
+        border-bottom-color: var(--themeColor);
+        transform: translate(-2px, -2px);
+        transition: all ease-in-out 0.3s;
+    }
+    .dashboardDeviceList ul li::after {
+        content: '\276F';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .dashboardDeviceList ul li p {
+        font-size: 13px;
+        margin-bottom: 5px;
+        color: var(--contentColor);
+    }
+    .dashboardDeviceList ul li p small {
+        font-size: 13px;
+        opacity: 1;
+    }
+    .dashboardDeviceList ul li p small strong {
+        margin-left: 5px;
+        color: var(--textColor);
+    }
+    .dashboardDeviceList ul li p small .badge {
+        margin-left: 5px;
+        font-style: normal;
+    }
+    .dashboardDeviceList ul li h6 {
+        font-weight: 600;
+        color: var(--blue);
+        margin: 0 0 5px;
+        font-size: 15px;
+    }
+    .dashboardDeviceListIcon {
+        height: 34px;
+        width: 34px;
+        background-color: #e3f9fc;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        border-radius: 50%;
+        padding: 2px;
+        border: 2px solid var(--borderColor);
+    }
+    .dashboardDeviceListIcon img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .dashboardGaugeBox {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        margin-bottom: 15px;
+        background-color: var(--whiteColor);
+    }
+    .dashboardGaugeBox h6 {
+        font-size: 13px;
+        text-align: center;
+        background-color: #e3f9fc;
+        margin: 0;
+        padding: 5px 10px;
+        color: var(--blackColor);
+        border-bottom: 1px solid #e2e0e1;
+        border-radius: 4px 4px 0 0;
+    }
+    .dashboardGaugeChart {
+        height: 200px;
+    }
+    .dashboardGaugeDetail {
+        display: flex;
+        flex-direction: row;
+    }
+    .dashboardGaugeDetail .flex-item {
+        padding: 5px;
+        border-right: 1px solid var(--borderColor);
+        text-align: center;
+        border-top: 1px solid var(--borderColor);
+    }
+    .dashboardGaugeDetail .flex-item:last-of-type {
+        border-right: 0;
+    }
+    .dashboardGaugeDetail .flex-item h5 {
+        font-size: 12px;
+        color: var(--contentColor);
+        margin: 0 0 5px;
+    }
+    .dashboardGaugeDetail .flex-item p {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--blue);
+        margin: 0;
+    }
+    /* end dashboard map*/
+
+    /* list page */
+    .listBox {
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+    .listHeader {
+        padding: 7px 10px;
+        margin-bottom: 7px;
+        border-bottom: 1px solid var(--borderColor);
+        background-color: transparent;
+        position: relative;
+    }
+    .listHeader h5 {
+        margin: 0;
+        color: var(--textColor);
+        font-size: 0.95em;
+        font-weight: 600;
+    }
+    .listHeader h5 .badge {
+        min-width: 20px;
+        padding: 3px 10px;
+        line-height: normal;
+        font-weight: 600;
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    .listHeader .btn-link {
+        font-size: 13px;
+        float: right;
+    }
+    .listHeaderBreadcrumb span {
+        display: inline-block;
+        padding: 0 15px 0 13px;
+        position: relative;
+    }
+    .listHeaderBreadcrumb span::after {
+        content: "/";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: #a9a9a9;
+    }
+    .listHeaderBreadcrumb span:first-child {
+        padding-left: 0;
+    }
+    .listHeaderBreadcrumb span:last-child::after {
+        display: none;
+    }
+    .listHeaderBreadcrumb span:hover {
+        cursor: pointer;
+        color: var(--lightBlueColor);
+        text-decoration: underline;
+    }
+    .listHeaderBreadcrumb span:hover::after {
+        text-decoration: none;
+    }
+    .listHeaderTooltipForm {
+        position: absolute !important;
+        top: -5px;
+        right: -103%;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        background-color: var(--whiteColor);
+        z-index: 2;
+        padding: 20px !important;
+    }
+    .listHeaderTooltipForm::before {
+        content: "\25C0";
+        position: absolute;
+        left: -22px;
+        top: 0;
+        font-size: 28px;
+        color: #ffffff;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    .genericDeviceList {
+        height: 417px;
+    }
+    .genericDeviceList ul {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .genericTicketList {
+        height: 400px;
+        overflow-y: auto;
+    }
+    ul.listBoxTabs li {
+        margin-right: 5px;
+    }
+    ul.listBoxTabs li a.nav-link {
+        border: 1px solid var(--borderColor);
+        border-bottom: 0;
+        color: var(--textColor);
+        padding: 7px 12px;
+        border-radius: 5px 5px 0 0;
+        font-size: 13px;
+    }
+    ul.listBoxTabs li a.nav-link:hover {
+        border-bottom: 0;
+        color: var(--black);
+        cursor: pointer;
+        background-color: var(--whiteColor);
+    }
+    ul.listBoxTabs li a.nav-link.active {
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+    }
+    .listBoxTabContent {
+        margin-top: 10px;
+    }
+    .listInitials .initialsImage {
+        position: relative;
+        display: inline-block;
+        margin-right: 7px;
+        height: 35px;
+        width: 35px;
+        background-color: #e3f9fc;
+        line-height: 34px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid var(--contentColor);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        transition: all ease-in-out 0.3s;
+    }
+    .listInitials .initialsImage:hover {
+        cursor: pointer;
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+        transition: all ease-in-out 0.3s;
+        transform: translateY(-2px);
+    }
+    /* end list page */
+
+    /* device details */
+    .genericGraphList .graphBox {
+        margin: 0 7px 14px;
+    }
+    .deviceDetailCounter li:first-child {
+        padding-left: 0;
+    }
+    .deviceDetailCounter li:last-child {
+        padding-right: 0;
+    }
+    .deviceDetailCounter .dashboardCountDetail {
+        transition: all ease-in-out 0.3s;
+        border: 1px solid #f2f0f1;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+    }
+    .deviceDetailCounter .dashboardCountDetail:hover {
+        cursor: pointer;
+        background-color: #e3f9fc;
+        box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+        transition: all ease-in-out 0.3s;
+    }
+    .deviceContent {
+        border: 1px solid #e2e2e2;
+        border-radius: 7px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .deviceContentStatus {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 8px 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 7px 7px 0 0;
+    }
+    .deviceContentStatus p {
+        font-size: 12px;
+        margin: 0;
+        color: var(--textColor);
+        font-weight: 600;
+    }
+    .deviceContentImage {
+        height: 250px;
+        width: 100%;
+        background-color: rgba(227, 249, 252, 0.7);
+        border-radius: 7px 7px 0 0;
+    }
+    .deviceContentImage img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding: 10px;
+    }
+    .deviceDetailContent {
+        padding: 15px 20px;
+    }
+    .deviceDetailContent h5 {
+        color: var(--lightBlueColor);
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .deviceDetailContent h6 {
+        font-size: 13px;
+        margin: 0 0 8px;
+        color: var(--contentColor);
+    }
+    .deviceDetailContent h6 strong {
+        color: var(--textColor);
+        margin-right: 7px;
+    }
+    .deviceDetailContent h6:last-of-type {
+        margin-bottom: 0;
+    }
+    .deviceDetailEntities p {
+        font-size: 14px;
+        color: var(--themeColor);
+    }
+    .deviceDetailEntities .badge {
+        padding: 8px 10px;
+        background-color: #e3f9fc;
+        color: var(--contentColor);
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0 10px 8px 0;
+    }
+    .deviceDetailEntities .connectedInstancesList {
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    .deviceDetailEntities .connectedInstancesList p {
+        border-bottom: 1px solid var(--borderColor);
+    }
+    .deviceDetailEntities .connectedInstancesList .badge-transparent {
+        background-color: transparent;
+        color: var(--contentColor);
+        font-size: 14px;
+        padding: 0;
+    }
+    .deviceDetailEntities .connectedNode {
+        display: inline-block;
+        margin: 0 6px 7px 0;
+        padding-right: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: capitalize;
+        position: relative;
+        color: var(--textColor);
+    }
+    .deviceDetailEntities .connectedNode::after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 9px;
+        display: inline-block;
+        background-color: var(--themeColor);
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+    }
+    .deviceDetailEntities .connectedNode:last-child::after {
+        display: none;
+    }
+    .deviceDetailLoader {
+        position: relative;
+        height: 100%;
+        text-align: center;
+    }
+    .deviceDetailBoxBody .tab-content .deviceDetailLoader {
+        min-height: 300px;
+    }
+    /* end device details */
+
+    /* device type */
+    .assignDeviceTypeModal {
+        max-height: 500px;
+        min-height: 300px;
+        overflow-y: auto;
+    }
+    .assignDeviceTypeModal .cardView {
+        padding-left: 100px;
+    }
+    .assignDeviceTypeModal .cardView .cardViewImageOuter {
+        width: 90px;
+    }
+    .assignDeviceTypeModal .cardView .cardImage {
+        width: 105px;
+    }
+    .assignDeviceTypeModal .cardView .cardImage img {
+        padding: 7px;
+    }
+    .assignDeviceTypeModal .cardView .cardViewHeader {
+        padding-right: 0;
+    }
+    .assignDeviceTypeModal .cardView .checkboxLabel {
+        position: absolute;
+        top: -7px;
+        right: 0;
+    }
+    .assignDeviceTypeModal .cardView .checkboxLabel .checkmark {
+        background-color: #e2e0e1;
+    }
+    .assignMenuModal {
+        max-height: 500px;
+        min-height: 300px;
+        overflow-y: auto;
+    }
+    /* end device type */
+
+    /* drill down view */
+    .genericDrillView {
+        width: 100%;
+    }
+    .genericDrillViewHeader, .genericDrillViewBody {
+        display: grid;
+        grid-template-columns: 31% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5%;
+        width: 100%;
+    }
+    .genericDrillViewItem {
+        margin: 5px;
+        position: relative;
+    }
+    .genericDrillViewItem p {
+        margin: 0;
+        border: 1px solid var(--borderColor);
+        padding: 7px 10px;
+        line-height: normal;
+        font-size: 0.87em;
+        font-weight: 600;
+        background-color: #e3f9fc;
+        border-radius: 2px;
+        color: var(--textColor);
+    }
+    .genericDrillViewItem h5, .genericDrillViewItem h4 {
+        margin: 0;
+        border: 1px solid var(--borderColor);
+        padding: 7px 15px;
+        font-size: 14px;
+        background-color: var(--whiteColor);
+        border-radius: 2px;
+        color: var(--contentColor);
+        line-height: 20px;
+    }
+    .genericDrillViewItem h5 i {
+        margin-right: 7px;
+    }
+    .genericDrillViewItem h4 {
+        padding-right: 30px;
+    }
+    .genericDrillViewItem h4 span {
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--textColor);
+        padding-right: 30px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .genericDrillViewItem h4 span::after {
+        content: "\21FE";
+        position: absolute;
+        top: -2px;
+        right: 0;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--lightBlueColor);
+    }
+    .genericDrillViewItem h4 span:last-of-type::after {
+        display: none;
+    }
+    .genericDrillViewItem h4 .btn {
+        color: var(--lightBlueColor);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 16px;
+    }
+    .genericDrillViewItem h4:hover {
+        cursor: pointer;
+    }
+    .genericDrillViewItem h4:hover span {
+        color: var(--themeColor);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .genericDrillViewItem h4:hover span::after {
+        text-decoration: none;
+    }
+    .genericDrillViewChildBox {
+        border: 0.1em dashed #dddddd;
+        background-color: #f2f0f1;
+    }
+    /* end drill down view */
+
+    /* card view */
+    ul.cardViewList li {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        margin-bottom: 15px;
+        padding: 0 15px 0 30px;
+    }
+    .cardView {
+        position: relative;
+        border-radius: 6px;
+        padding: 12px 12px 12px 140px;
+        height: 100%;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+        border: none;
+        transition: all ease-in-out 0.3s;
+    }
+    .cardViewState {
+        position: absolute;
+        bottom: 0;
+        right: 4px;
+        z-index: 5;
+    }
+    .cardViewState span {
+        font-weight: 600;
+        font-size: 12px;
+        color: green;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: white;
+        padding: 0px 4px 0px 4px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+    }
+    .cardViewImageOuter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 125px;
+        height: 100%;
+        background-color: #e3f9fc;
+        border-radius: 6px 0 0 6px;
+        transition: all ease-in-out 0.4s;
+    }
+    .cardViewImageOuter .cardImage {
+        position: absolute;
+        left: -25px;
+        top: 12px;
+        bottom: 12px;
+        width: 135px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        transition: all ease-in-out 0.1s;
+    }
+    .cardView .cardImage img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding: 12px;
+    }
+    .cardMarker {
+        position: absolute;
+        bottom: 3px;
+        right: 5px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        z-index: 3;
+        background: #ffffff;
+        border: 2px solid var(--borderColor);
+    }
+    .cardMarker img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        padding: 5px;
+    }
+    .tenantTheme {
+        display: block;
+        background-color: var(--whiteColor);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+    }
+    .cardView .tenantTheme{
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+    .cardView .cardViewHeader {
+        background-color: transparent;
+        padding: 0 65px 10px 0;
+        position: relative;
+    }
+    .cardView .cardViewHeader h5 {
+        margin: 0;
+        color: var(--themeColor);
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .cardViewHeader .button-group {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .cardViewHeader .button-group .btn-transparent:last-of-type {
+        margin-right: 0;
+    }
+    .cardView .cardViewBody {
+        padding: 10px 0 0 0;
+        border-top-right-radius: 9px;
+        border-bottom-right-radius: 9px;
+    }
+    .cardView .cardViewBody p {
+        padding-left: 27px;
+        position: relative;
+        margin-bottom: 4px;
+        color: var(--contentColor);
+        font-size: 0.98em;
+        line-height: 20px;
+        min-height: 20px;
+    }
+    .cardView .cardViewBody p span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 13px;
+    }
+    .cardView .cardViewBody h5 {
+        position: relative;
+        margin-bottom: 5px;
+        color: var(--contentColor);
+        font-size: 13px;
+        line-height: 19px;
+    }
+    .cardView .cardViewBody p:last-of-type,
+    .cardView .cardViewBody h5:last-of-type {
+        margin-bottom: 0;
+    }
+    .cardView .cardViewBody h5 strong {
+        margin-right: 10px;
+        padding-right: 18px;
+        position: relative;
+        color: var(--textColor);
+    }
+    .cardView .cardViewBody h5 strong::after {
+        content: '\279C';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #b0b0b0;
+    }
+    .cardView:hover {
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        transition: all ease-in-out 0.3s;
+    }
+    .cardView:hover .cardImage {
+        transform: rotateY(360deg);
+        transition: all ease-in-out 1.7s;
+    }
+    .cardView:hover .cardViewImageOuter {
+        background-color: #AED6F1;
+        transition: all ease-in-out 0.4s;
+    }
+    /* end card view */
+
+    /* device studio */
+    .deviceBox {
+        padding-left: 410px;
+    }
+    .deviceList {
+        position: fixed;
+        top: 110px;
+        left: 5px;
+        bottom: 40px;
+        overflow-y: auto;
+    }
+    .deviceListWidth {
+        width: 100% !important;
+    }
+    .deviceList ul.cardViewList li {
+        flex: none;
+        max-width: none;
+        padding-right: 5px;
+        margin-bottom: 10px;
+        width: 410px;
+    }
+    .deviceList ul.cardViewList li .cardView {
+        padding-left: 110px;
+        border-bottom: 4px solid var(--borderColor);
+        box-shadow: none;
+    }
+    .deviceList ul.cardViewList li.active .cardView {
+        border-bottom-color: var(--themeColor);
+    }
+    .deviceList ul.cardViewList li .cardViewHeader {
+        padding-right: 40px;
+    }
+    .deviceList ul.cardViewList li .cardViewImageOuter {
+        width: 95px;
+    }
+    .deviceList ul.cardViewList li .cardViewImageOuter .cardImage {
+        width: 105px;
+    }
+    .deviceDetailBox {
+        border-radius: 5px;
+    }
+    .deviceDetailBoxHeader {
+        padding: 8px 20px;
+        background-color: #d1ecf1;
+        border: 1px solid #bee5eb;
+        border-bottom-color: transparent;
+        border-radius: 5px 5px 0 0;
+        color: var(--blackColor);
+    }
+    .deviceDetailBoxBody {
+        background-color: var(--whiteColor);
+        padding: 15px;
+        border-radius: 0 0 5px 5px;
+        height: calc(100vh - 202px);
+        overflow-y: auto;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+    /* end device studio */
+}
+
+@media only screen and (max-width: 991.98px) {
+}

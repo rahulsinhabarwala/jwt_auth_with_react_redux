@@ -1,0 +1,110 @@
+@media only screen{
+    .deviceDetail .card{
+        height: calc(100% - 15px);
+    }
+    .deviceDetailsBox{
+        padding-left: 330px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .deviceDetailsBox .deviceImage{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 310px;
+        height: 240px;
+        padding: 5px;
+        border: 2px dotted rgba(0,0,0,0.1);
+    }
+    .deviceDetailsBox .deviceImage img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .deviceDetailsBox .deviceImage img.defaultImg{
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+    .deviceDetailsBox .deviceDetailContent{
+        color: var(--contentColor);
+        font-size: 13px;
+        padding-left: 10px;
+    }
+    .deviceDetailsBox .deviceDetailContent h5{
+        color:var(--themeColor);
+        font-weight: 600;
+    }
+    .deviceDetailsBox .deviceDetailContent h6{
+        line-height: 22px;
+    }
+    .deviceDetailsBox .deviceDetailContent h6 strong{
+        color: var(--themeColor);
+    }
+    .configuredEntities h2{
+        font-size: 15px;
+        color: var(--themeColor);
+        font-weight: 600;
+    }
+    .configuredEntities h2 span.edit{
+      font-size: 13px;
+      margin-left: 5px;
+      /* float: right; */
+    }
+    .configuredEntities .entityBlock{
+        margin-top: 10px;
+        align-items: center;
+        padding-left: 130px;
+        position: relative;
+    }
+    .configuredEntities .entityBlock p{
+        margin: 0;
+        position: absolute;
+        left:6px;
+        color: var(--lightBlueColor);
+    }
+    .configuredEntities span.badge{
+        padding: 8px;
+        background-color: aliceblue !important;
+        color: var(--contentColor);
+        font-weight: 600;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    .assignedHierarchy h2{
+        font-size: 15px;
+        color: var(--themeColor);
+        font-weight: 600;
+    }
+    .assignedHierarchy h2 span.edit{
+        font-size: 13px;
+        margin-left: 5px;
+        /* float: right; */
+      }
+    .assignedHierarchy span.badge{
+          padding: 8px;
+          background-color: aliceblue !important;
+          color: var(--contentColor);
+          font-weight: 600;
+          font-size: 13px;
+          margin: 10px 10px 0 0 ;
+      }
+    .noDataMsg button{
+        padding: 4px 8px;
+    }
+    .noDataMsg p{
+        color: var(--lightBlueColor);
+        font-size: 15px;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .noDataMsg p i{
+        margin-right: 10px;
+    }
+
+}

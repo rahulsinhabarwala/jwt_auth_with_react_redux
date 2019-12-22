@@ -1,0 +1,189 @@
+@import "variable.css";
+@media only screen {
+    .topNav {
+        position: fixed;
+        padding: 15px 15px 15px 90px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        background-image: linear-gradient(#22437C, #22437C, #0A2446);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+    .topNav .navbar-brand {
+        color: var(--white) !important;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 0;
+    }
+    .topNav .navbar-toggler {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 70px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 0;
+    }
+    .topNav .navbar-toggler i {
+        font-size: 20px;
+        color: var(--white);
+    }
+    .leftMenuBox {
+        position: fixed;
+        top: 53px;
+        left: 0;
+        bottom: 0;
+        background-color: var(--white);
+        z-index: 3;
+        width: 70px;
+        border-right: 2px solid var(--borderColor);
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link {
+        padding: 12px 20px;
+        margin-bottom: 5px;
+        color: var(--contentColor);
+        font-size: 13px;
+        position: relative;
+        cursor: pointer;
+        border-left: 4px solid transparent;
+        transition: all ease-in-out 0.4s;
+        text-align: center;
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link i {
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*transform: translateY(-50%);*/
+        /*right: 15px;*/
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link .nav-link-icon {
+        font-size: 20px;
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link .nav-link-text {
+        position: absolute;
+        left: 120%;
+        background-color: var(--white);
+        padding: 10px;
+        border: 1px solid var(--borderColor);
+        width: 120px;
+        border-radius: 3px;
+        display: none;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        transition: all ease-in-out 0.3s;
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link .nav-link-text::before {
+        content: '\25C0';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        color: #a9a9a9;
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link:hover {
+        color: var(--themeColor);
+        transition: all ease-in-out 0.4s;
+    }
+    .leftMenuBox .navbar-nav .nav-item.active .nav-link {
+        color: var(--themeColor);
+        border-left-color: var(--themeColor);
+        background-color: rgba(237, 245, 249, 0.9);
+        transition: all ease-in-out 0.4s;
+    }
+    .leftMenuBox .navbar-nav .nav-item .nav-link:hover .nav-link-text {
+        display: block;
+        transition: all ease-in-out 0.3s;
+    }
+    ul.topNavProfile,
+    ul.topNavMenu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        position: absolute;
+        right: 10px;
+    }
+    ul.topNavProfile h5 {
+        margin: 0 25px 2px 0;
+        font-size: 14px;
+        color: var(--white);
+        text-transform: capitalize;
+    }
+    ul.topNavProfile p {
+        margin: 0 25px 0 0;
+        font-size: 11px;
+        color: #e2e2e2;
+    }
+    .topNavInitial,
+    .topNavNotifyBtn .btn {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.25);
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--white);
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 0;
+    }
+    .topNavDropdown .btn {
+        padding: 0 12px;
+        vertical-align: top;
+        border: 0;
+    }
+    .topNavDropdown .btn i {
+        color: var(--white);
+    }
+    .topNavDropdown .dropdown-menu {
+        top: 35px !important;
+        right: 0 !important;
+        left: initial !important;
+        padding: 12px;
+        min-width: 160px;
+    }
+    .topNavDropdown .dropdown-menu .dropdown-item {
+        display: block;
+        padding: 7px;
+        font-size: 13px;
+        color: var(--textColor);
+        border-bottom: 1px solid #f2f0f1;
+    }
+    .topNavDropdown .dropdown-menu .dropdown-item:first-child {
+        padding-top: 0;
+    }
+    .topNavDropdown .dropdown-menu .dropdown-item:last-child {
+        padding-bottom: 0;
+        border-bottom-color: transparent;
+    }
+    .topNavDropdown .dropdown-menu .dropdown-item.active,
+    .topNavDropdown .dropdown-menu .dropdown-item:hover,
+    .topNavDropdown .dropdown-menu .dropdown-item:focus {
+        background-color: transparent;
+        color: var(--themeColor);
+        cursor: pointer;
+    }
+    .topNavNotifyBtn {
+        margin-right: 25px;
+        position: relative;
+        padding-right: 20px;
+    }
+    .topNavNotifyBtn::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        right: 0;
+        bottom: 3px;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+@media only screen and (max-width: 991.98px) {
+
+}

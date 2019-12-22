@@ -1,0 +1,74 @@
+@media only screen {
+    .loginOuterBox {
+        background: url('https://d1nu2br1yr2980.cloudfront.net/images/other/skodaBg.jpg') center no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .loginOverlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to right, #000000, #4ba82e);
+        opacity: 0.5;
+    }
+    .loginInnerBox {
+        padding-right: 130px;
+        display: block;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 9%;
+        transform: translate(-9%, -50%);
+    }
+    .loginImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 140px;
+        background-color: rgba(75, 168, 46, 0.8);
+        border-radius: 0 10px 10px 0;
+        text-align: center;
+    }
+    .loginImage img {
+        width: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.75;
+    }
+    .loginBox {
+        background-color: #000000;
+        padding: 30px;
+        border: 0;
+        border-radius: 10px;
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: none;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        width: 360px;
+    }
+    .loginHeaderText {
+        text-align: center;
+    }
+    .loginHeaderText h1 {
+        color: var(--whiteColor);
+        font-weight: bold;
+        margin: 0 0 10px;
+    }
+    .loginHeaderText h4 {
+        color: #4ba82e;
+        font-size: 16px;
+        margin: 0 0 10px;
+    }
+    .loginForm {
+        padding-top: 10px;
+    }
+    .loginForm .btn-primary {
+        background-color: #4ba82e;
+    }
+}

@@ -1,0 +1,342 @@
+@media only screen {
+    .expList {
+        list-style: none;
+        padding: 5px 20px 40px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+    }
+    .expList::before, .expList::after {
+        content: "";
+        position: absolute;
+        bottom: 7px;
+        height: 7px;
+        width: 7px;
+        background-color: var(--themeColor);
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .expList::before {
+        left: 18px;
+    }
+    .expList::after {
+        right: 18px;
+    }
+    .expList li {
+        flex: 1;
+        cursor: pointer;
+        position: relative;
+    }
+    .expList .expListBox {
+        padding: 10px 5px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        height: 100%;
+        margin: 0 5px;
+        background-color: var(--white);
+        transition: all ease-in-out 0.3s;
+    }
+    .expList li::before {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, var(--themeColor) 50%, var(--borderColor) 50%);
+        background-size: 200% 100%;
+        background-position: right;
+        transition: all .5s ease-out;
+    }
+    .expList li::after {
+        content: "";
+        position: absolute;
+        bottom: -29px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        height: 10px;
+        width: 10px;
+        background-color: var(--borderColor);
+        border-radius: 50%;
+    }
+    .expList li.active::before {
+        background-color: var(--themeColor);
+    }
+    .expList li.active::after {
+        background-color: var(--themeColor);
+    }
+
+    .expList li.active::before{
+        background-position: right;
+        background-size: 100% 100%;
+    }
+
+    .expList .expListBox .expListImage {
+        width: 100%;
+    }
+    .expList .expListBox .expListImage i {
+        font-size: 21px;
+        margin: 5px 0 10px;
+        opacity: 0.6;
+    }
+    .expList .expListBox h6 {
+        font-size: 12px;
+        color: var(--black);
+        margin: 0;
+    }
+    .expList .expListBox:hover, .expList .expListBox:hover h6 {
+        color: var(--themeColor);
+        border-left-color: var(--themeColor);
+        transition: all ease-in-out 0.3s;
+    }
+    .expList .expListBox:hover {
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+        transform: translateY(-3px);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .expList li.active .expListBox {
+        background-color: var(--themeColor);
+        color: var(--themeColor);
+        transition: all ease-in-out 0.2s;
+    }
+    .disableOverLay {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 5px;
+        cursor: not-allowed;
+    }
+    .expList li.expDisable .expListBox .disableOverLay {
+        display: block;
+    }
+    .expList li.expDisable .expListBox, .expList li.expDisable .expListBox h6, .expList li.expDisable:hover .expListBox h6 {
+        color: var(--contentColor);
+    }
+    .expList li.expDisable .expListBox {
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5) inset;
+        transform: translateY(0);
+    }
+    .expLoader {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 3;
+        border-radius: 4px;
+    }
+    .expLoader i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--themeColor);
+        font-size: 28px;
+    }
+    .expForm {
+        margin: 0 10px;
+        border: 1px solid var(--borderColor);
+        border-radius: 5px;
+        background-color: var(--white);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.02);
+        height: 100%;
+    }
+    .expForm .contentForm.animated {
+        animation-duration: 0.5s;
+    }
+    .expForm .card-header {
+        background-color: #EFF5FE;
+        text-align: center;
+    }
+    .expForm .card-header h5 {
+        font-size: 15px;
+        color: var(--themeColor);
+        margin: 0 0 5px;
+        font-weight: bold;
+    }
+    .expForm .card-header p {
+        font-size: 0.96em;
+        color: var(--contentColor);
+        margin: 0;
+    }
+    .expForm .card-body .contentForm {
+        width: 100%;
+        padding: 20px;
+    }
+    .expForm .card-body .contentForm .bottomButton {
+        margin-bottom: 0;
+    }
+    .expTopology {
+        height: 455px;
+        margin-left: 20px;
+    }
+    .expTopology h4 {
+        text-align: center;
+        color: var(--themeColor);
+        font-size: 15px;
+        background-color: var(--whiteColor);
+        margin: 0 0 10px;
+        padding: 10px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+    }
+    .expTopology ul {
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    .expTopology li {
+        border: 0.12em dashed var(--borderColor);
+        border-radius: 3px;
+        padding: 8px 20px 8px 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        position: relative;
+        font-size: 0.94em;
+        color: var(--contentColor);
+        text-transform: lowercase;
+        background-color: var(--whiteColor);
+    }
+    .expTopology li::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 18px;
+        background-color: #dddddd;
+        top: 102%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .expTopology li:last-child::after {
+        content: "";
+        width: 0;
+        height: 0;
+    }
+    .expTopology li .expTopologyChecked, .expTopology li .expResult {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 8px;
+    }
+    .expTopology li .expTopologyChecked i {
+        color: #22B108;
+        font-size: 15px;
+        display: none;
+    }
+    .expTopology li .expResult {
+        background-color: #e5eef4;
+        left: initial;
+        right: 0;
+        cursor: pointer;
+        padding: 8px 10px;
+    }
+    .expTopology li .expResult i {
+        color: var(--themeColor) !important;
+    }
+    .expTopology li .expTopologyChecked i {
+        display: inline-block;
+    }
+    .expTopology li.expSuccess {
+        border-color: #22B108;
+        color: #2B8F19;
+    }
+    .expTopology li.expDanger {
+        border-color: #ff9999;
+    }
+    .expTopology li.expDanger .expTopologyChecked i {
+        color: #ff4d4d;
+    }
+    .result {
+        background-color: #464E62;
+        color: white;
+        width: 60%;
+        margin: 50px auto 10px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .result h4 {
+        background-color: transparent !important;
+        color: white !important;
+    }
+    .noteText {
+        padding: 7px 15px;
+        margin: -15px -15px 0;
+        background-color: #f7fafd;
+        position: relative;
+    }
+    .noteText h5 {
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute;
+        top: -10px;
+        left: 15px;
+    }
+    .noteText p {
+        font-size: 11px;
+        color: var(--contentColor);
+        margin: 0;
+        line-height: 19px;
+    }
+    .noteText p span {
+        color: var(--lightBlueColor);
+        margin-right: 8px;
+    }
+    /* deviceConfigBody Start */
+    .deviceConfigBody {
+        height: 450px;
+    }
+    .deviceConfigBody textarea {
+        border: 2px dashed #ddd;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        border-radius: 4px;
+    }
+    .deviceConfigBody .deviceCheckDetail {
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .deviceConfigBox .form-group-label {
+        position: relative !important;
+        left: initial !important;
+        top: initial !important;
+        transform: none !important;
+        color: var(--textColor) !important;
+    }
+    .deviceCheckDetail .btn-link {
+        position: absolute;
+        right: 0;
+        padding: 0;
+        top: 7px;
+        font-size: 12px;
+    }
+    .deviceCheckDetail .btn-link:hover {
+        text-decoration: underline;
+    }
+    .deviceCheckDetail ul {
+        list-style: none;
+        padding: 15px 30px;
+        margin: 0;
+    }
+    .deviceCheckDetail ul li {
+        padding: 5px 0;
+    }
+    /* deviceConfigBody End */
+}

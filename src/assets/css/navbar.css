@@ -1,0 +1,227 @@
+@import "variable.css";
+@media only screen {
+    .topNav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--whiteColor);
+        padding: 0;
+        z-index: 6;
+    }
+    .topNav .navbar-brand {
+        position: absolute;
+        width: 95px;
+        height: 100%;
+        background-color: var(--white);
+        padding: 5px 0;
+    }
+    .topNav .navbar-brand img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .topNav .navbar-collapse {
+        width: 100%;
+    }
+    .topNav .navbar-nav {
+        width: 100%;
+        flex-direction: row;
+        padding-left: 100px;
+        padding-right: 200px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+    .topNav .navbar-nav .nav-item {
+        display: inline-block;
+        margin: 0 3px;
+    }
+    .topNav .navbar-nav .nav-item .nav-link {
+        padding: 12px;
+        border-bottom: 3px solid transparent;
+        color: var(--textColor);
+        font-size: 13px;
+        position: relative;
+        cursor: pointer;
+    }
+    .topNav .navbar-nav .nav-item .nav-link span {
+        display: block;
+        white-space: nowrap;
+    }
+    .topNav .navbar-nav .nav-item .nav-link i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3px;
+    }
+    .topNav .navbar-nav .nav-item .nav-link:hover {
+        color: var(--themeColor);
+    }
+    .topNav .navbar-nav .nav-item.active .nav-link {
+        color: var(--themeColor);
+        border-bottom-color: var(--themeColor);
+    }
+    .topNav .navbar-nav .nav-item.dropdown .dropdown-menu {
+        padding: 0;
+        max-height: 200px;
+        min-width: 200px;
+        overflow-y: auto;
+        margin: 0;
+    }
+    .topNav .navbar-nav .nav-item.dropdown .dropdown-menu .nav-link {
+        padding: 10px 12px;
+        border: 0;
+    }
+    .topNav .navbar-nav .nav-item.dropdown .dropdown-menu .nav-item {
+        display: block;
+    }
+    .topNav .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    .topNavProfile {
+        position: absolute;
+        right: 10px;
+        height: 100%;
+        padding-right: 70px;
+    }
+    .topNavProfile h5 {
+        margin: 10px 15px 12px 0;
+        color: var(--contentColor);
+        font-size: 14px;
+        text-align: right;
+    }
+    .topNavProfile h5 span:first-child{
+        color: var(--themeColor);
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .topNavProfile h5 span:last-child {
+        color: darkgray;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .topNavInitial {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: var(--themeColor);
+        display: block;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--whiteColor);
+        text-align: center;
+        line-height: 38px;
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .loginMenu {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .loginMenu button {
+        height: 30px;
+        width: 30px;
+        border: 0;
+        color: var(--contentColor);
+        border-radius: 50%;
+        padding: 0;
+        text-align: center;
+    }
+    .loginMenu button:hover,
+    .loginMenu button:focus {
+        color: var(--themeColor);
+        background-color: #e3f9fc;
+    }
+    .loginMenu .dropdown-menu {
+        top: 36px !important;
+        right: 0 !important;
+        left: initial !important;
+        padding: 10px;
+        min-width: 160px;
+    }
+    .loginMenu .dropdown-menu .dropdown-item {
+        display: block;
+        padding: 7px 5px;
+        font-size: 13px;
+        color: var(--textColor);
+        border-bottom: 1px solid #f2f0f1;
+    }
+    .loginMenu .dropdown-menu .dropdown-item:first-child {
+        padding-top: 0;
+    }
+    .loginMenu .dropdown-menu .dropdown-item:last-child {
+        padding-bottom: 0;
+        border-bottom-color: transparent;
+    }
+    .loginMenu .dropdown-menu .dropdown-item.active,
+    .loginMenu .dropdown-menu .dropdown-item:hover,
+    .loginMenu .dropdown-menu .dropdown-item:focus {
+        background-color: transparent;
+        color: var(--themeColor);
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 991.98px) {
+    .topNav {
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-toggler {
+        text-align: center;
+        margin-right: 45px;
+        position: relative;
+    }
+    .navbar-toggler i {
+        font-size: 24px;
+        color: var(--contentColor);
+    }
+    .topNav .navbar-brand {
+        position: relative;
+        height: 44px;
+    }
+    .topNav .navbar-brand img {
+        padding: 10px;
+    }
+    .topNav .navbar-nav {
+        padding: 0 10px 10px;
+        flex-direction: column;
+        box-shadow: none;
+        border-top: 1px solid #f2f0f1;
+    }
+    .topNav .navbar-nav .nav-item {
+        display: block;
+        text-align: right;
+    }
+    .topNav .navbar-nav .nav-item .nav-link {
+        padding: 10px 15px;
+        border-bottom: 1px solid var(--borderColor);
+        font-size: 13px;
+        display: inline-block;
+    }
+    .topNav .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom-color: transparent;
+    }
+    .topNav .navbar-nav .nav-item.active .nav-link {
+        border-bottom-color: var(--borderColor);
+    }
+    .topNavProfile {
+        padding: 0;
+        right: 5px;
+        height: auto;
+        top: 0;
+    }
+    .topNavProfile p {
+        display: none;
+    }
+    .loginMenu {
+        position: relative;
+        top: 4px;
+        transform: none;
+    }
+    .loginMenu button {
+        display: none;
+    }
+}

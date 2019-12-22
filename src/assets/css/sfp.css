@@ -1,0 +1,603 @@
+@media only screen {
+    /* sfp dashboard */
+    .deviceListView ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .deviceListView ul li.deviceListBox {
+        background-color: #ffffff;
+        border-radius: 4px;
+        padding: 10px 45px 8px 15px;
+        border: 1px solid #f3f3f3;
+        border-bottom: 3px solid #e5eef4;
+        z-index: 1;
+        margin-bottom: 7px;
+        position: relative;
+        transition: all ease-in-out 0.3s;
+    }
+    .deviceListView ul li.deviceListBox .deviceListBoxArrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        background-color: #EFF3FE;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: background-color ease-in-out 0.4s;
+    }
+    .deviceListView ul li.deviceListBox .deviceListBoxArrow i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 17px;
+        color: var(--contentColor);
+    }
+    .deviceListView ul li.deviceListBox small {
+        display: block;
+        color: var(--contentColor);
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+    .deviceListView ul li.deviceListBox small span {
+        display: inline-block;
+    }
+    .deviceListView ul li.deviceListBox small span::after,
+    .deviceListView ul li.deviceListBox p span::after {
+        content: "|";
+        margin: 0 10px;
+    }
+    .deviceListView ul li.deviceListBox small span:last-child::after,
+    .deviceListView ul li.deviceListBox p span:last-child::after {
+        display: none;
+    }
+    .deviceListView ul li.deviceListBox small .badge {
+        font-style: normal;
+        margin-left: 5px;
+        line-height: normal;
+        padding: 1px 5px;
+        font-size: 8px;
+        min-width: 20px;
+    }
+    .deviceListView ul li.deviceListBox h5 {
+        color: var(--themeColor);
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    .deviceListView ul li.deviceListBox p {
+        font-size: 0.90em;
+        margin-bottom: 5px;
+        color: var(--contentColor);
+    }
+    .deviceListView ul li.deviceListBox p:last-child {
+        margin-bottom: 0;
+    }
+    .deviceListView ul li.deviceListBox p strong {
+        margin-right: 5px;
+    }
+    .deviceListView ul li.deviceListBox:hover {
+        cursor: pointer;
+        border-bottom-color: #ced4da;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+        transition: all ease-in-out 0.3s;
+        transform: translateY(-1px);
+        background-color: var(--whiteColor);
+    }
+    .deviceListView ul li.deviceListBox .active {
+        cursor: pointer;
+        border-bottom-color: var(--themeColor);
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+        transition: all ease-in-out 0.3s;
+        transform: translateY(-1px);
+        background-color: var(--whiteColor);
+    }
+    .deviceListView ul li.deviceListBox:hover .deviceListBoxArrow {
+        background-color: var(--themeColor);
+        transition: background-color ease-in-out 0.3s;
+    }
+    .deviceListView ul li.deviceListBox:hover .deviceListBoxArrow i {
+        color: var(--whiteColor);
+    }
+    #buildingList.listBody {
+        height: 472px;
+        overflow-y: auto;
+        overflow-x: visible;
+    }
+    .deviceListFooter {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        right: 60px;
+        border: 0;
+        padding: 0;
+    }
+    .deviceListFooter ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .deviceListFooter ul li {
+        display: inline-block;
+        width: 20%;
+    }
+    .deviceListFooter ul li .deviceListFooterDetail {
+        position: relative;
+        background-color: var(--whiteColor);
+        border: 2px solid var(--borderColor);
+        padding: 7px 15px;
+        margin-right: 5px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .deviceListFooter ul li .deviceListFooterDetail h4 {
+        margin: 0;
+        color: var(--themeColor);
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .deviceListFooter ul li .deviceListFooterDetail p {
+        margin: 0;
+        color: var(--contentColor);
+        font-size: 13px;
+    }
+    .deviceListFooterIcon {
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        width: 40px;
+        background-color: var(--themeColor);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    .deviceListFooterIcon i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--whiteColor);
+        font-size: 18px;
+    }
+    .deviceHomeTabs {
+        position: relative;
+        min-height: 390px;
+    }
+    .deviceHomeTabs .nav-tabs {
+        border: none;
+        width: 140px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .deviceHomeTabs li.nav-item {
+        width: 100%;
+        margin: 0 10px 10px 0;
+        text-align: center;
+    }
+    .deviceHomeTabs a.nav-link {
+        border: 0;
+        position: relative;
+        padding: 10px;
+        cursor: pointer;
+        background-color: var(--whiteColor);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        display: block;
+        border-radius: 4px;
+        font-size: 0.96em;
+        color: var(--contentColor);
+    }
+    .deviceHomeTabs a.nav-link .deviceHomeTabsIcon {
+        display: block;
+        position: relative;
+        margin: 0 auto 5px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #e3f9fc;
+        border: 2px solid #e5eef4;
+    }
+    .deviceHomeTabs a.nav-link .deviceHomeTabsIcon i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--themeColor);
+        font-size: 16px;
+    }
+    .deviceHomeTabs a.nav-link::after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        transform: skew(-40deg);
+        top: 15px;
+        right: -8px;
+    }
+    .deviceHomeTabs a.nav-link:hover {
+        color: var(--themeColor);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+    }
+    .deviceHomeTabs a.nav-link.active {
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+    }
+    .deviceHomeTabs a.nav-link.active::after {
+        background-color: var(--themeColor);
+    }
+    .deviceHomeTabs a.nav-link.active .deviceHomeTabsIcon  {
+        background-color: var(--whiteColor);
+    }
+    .deviceHomeTabs .tab-content {
+        padding-left: 160px;
+    }
+    .deviceHomeTabs .graphBoxHeader {
+        border: 0;
+        padding: 10px 15px;
+        margin: 0;
+    }
+    .deviceHomeTabs .graphBoxHeader h4 {
+        text-align: center;
+        font-size: 16px;
+        color: var(--themeColor);
+        font-weight: 600;
+    }
+    .deviceHomeTabs .graphBoxHeader p {
+        font-size: 13px;
+        color: var(--contentColor);
+        margin: 0;
+        white-space: normal;
+        line-height: 22px;
+    }
+    /* end sfp dashboard */
+
+    /* sfp building */
+    .listBodyFull {
+        height: calc(100vh - 205px);
+        position: sticky;
+        overflow-y: auto;
+        top: 0;
+        bottom: 0;
+    }
+    .detailBox {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 4px;
+        background-color: var(--whiteColor);
+        height: 100%;
+        overflow-y: auto;
+    }
+    .detailBoxCounter {
+        text-align: center;
+        margin: -8px -12px;
+        padding: 12px;
+        transition: all ease-in-out 0.3s;
+        position: relative;
+    }
+    .detailBoxCounter h5 {
+        color: var(--themeColor);
+        margin-bottom: 5px;
+    }
+    .detailBoxCounter h5 span {
+        font-size: 13px;
+        margin-left: 3px;
+    }
+    .detailBoxCounter p {
+        margin: 0;
+        color: var(--contentColor);
+        font-size: 13px;
+    }
+    .detailBoxCounter p i {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .detailBoxCounter:hover {
+        background-color: #F4FDFF;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+    }
+    .detailBoxCounterDetail {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+    }
+    .detailBoxGraph .card-body.graphBoxBody {
+        height: 280px;
+    }
+    .detailBoxGraph::before {
+        content: "\25C0";
+        position: absolute;
+        top: 0;
+        font-size: 28px;
+        color: #ffffff;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    /* end sfp building */
+
+    /* SFP Detail Page */
+    .sfpView {
+        padding: 10px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        background-color: var(--whiteColor) !important;
+    }
+    .sensorDetailBox {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        background-color: var(--whiteColor) !important;
+        padding: 20px 15px 20px 340px;
+        position: relative;
+        min-height: 300px;
+    }
+    .sensorImage {
+        width: 320px;
+        height: 270px;
+        border-right: 1px solid var(--borderColor);
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+    .sensorImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    .sensorDetailContent h5 {
+        color: var(--themeColor);
+        font-weight: 600;
+    }
+    .sensorDetailContent p {
+        color: var(--contentColor);
+        font-size: 0.97em;
+        line-height: 24px;
+        margin: 0;
+    }
+    ul.graphStandards {
+        padding: 0;
+        margin: 40px 0 0;
+        list-style: none;
+        text-align: left;
+    }
+    ul.graphStandards li {
+        font-size: 13px;
+        color: #505050;
+        line-height: 20px;
+        position: relative;
+        padding: 5px 5px 5px 30px;
+    }
+    ul.graphStandards li .badge {
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 7px;
+        left: 0;
+    }
+    ul.graphStandards li strong {
+        margin-right: 5px;
+    }
+    ul.graphStandards li i {
+        font-size: 15px;
+        margin: 0 10px;
+    }
+    .listBodyBox {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        font-size: 14px;
+        background-color: var(--whiteColor);
+    }
+    .sfpDetails .listBox .listHeader h5 {
+        margin: 0;
+        color: var(--textColor);
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .sfpDetails .listBox .listBody ul {
+        padding: 0 0 0 20px;
+        margin: 0;
+        list-style: none;
+    }
+    .sfpDetails .listBox .listBody ul li {
+        color: var(--contentColor);
+        padding: 5px 0;
+    }
+    .sfpDetails .listBox .listBody ul li strong {
+        color: var(--textColor);
+    }
+    .sfpDetails .listBox .listBody .buttonGroup button {
+        margin-bottom: 5px;
+    }
+    .sfpDetails .listBox .listBody.sfpInfo button {
+        /* background-color: var(--lightBlueColor); */
+        color: var(--whiteColor);
+        position: relative;
+        padding-left: 50px;
+    }
+    .sfpDetails .listBox .listBody.sfpInfo button span {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50px;
+    }
+    .sfpDetails .listBox .listBody.sfpInfo button span i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sfpDetails .listBox .listBody.sfpInfo button p {
+        margin: 0;
+        padding-left: 50px;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .sfpDetails .listBox .listBody.sfpSensors {
+        height: 450px;
+    }
+    .sfpDetails .listBox .listBody.sfpSensors .sfpView {
+        position: sticky !important;
+        background-color: white;
+        height: 440px;
+    }
+    /* Sensor Detail Block */
+    .sensorDetails .listBox .listHeader {
+        position: relative;
+    }
+    .sensorDetails .listBox .listHeader .sensorList {
+        width: 300px;
+    }
+    .sensorDetails .sensorInfoDetails .sensorDetailList ul {
+        padding: 20px;
+        margin: 0;
+    }
+    .sensorDetails .sensorInfoDetails .sensorDetailList ul li {
+        color: var(--themeColor);
+    }
+    .sensorDetails .listBox .listHeader .sensorList .form-control {
+        width: 200px;
+        margin-left: auto;
+    }
+    .sensorDetails .sensorInfoDetails {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+        padding: 10px;
+        margin: 10px 0;
+        height: 300px;
+    }
+    .sensorDetails .sensorInfoDetails .sensorImage {
+        align-self: center;
+    }
+    .sensorDetails .sensorInfoDetails .sensorDetailBrief {
+        padding: 10px;
+        position: relative;
+        color: var(--contentColor);
+        font-size: 14px;
+    }
+    .sensorDetails .sensorInfoDetails .sensorDetailBrief h5 {
+        color: var(--themeColor);
+    }
+    .sensorDetails .sensorInfoDetails .sensorDetailBrief button {
+        position: absolute;
+        bottom: 10px;
+        padding: 5px 10px;
+        right: 10px;
+        margin: 10px 0;
+    }
+    .sensorMeasurementDetail {
+        border: 1px solid #f1f1f1;
+        background-color: var(--whiteColor);
+        box-shadow: 0 2px 4px #dadada;
+    }
+    .sensorMeasurementDetail .nav-link {
+        border-radius: 0;
+        margin: 0 !important;
+        padding: 0;
+        border: 1px solid #e4e4e4;
+        background-color: #f2f2f2;
+    }
+    .sensorMeasurementDetail .nav-link:hover {
+        filter: brightness(95%);
+    }
+    .sensorDetails .listBox .listBody .nav-tabs .nav-link.active {
+        color: #ffffff;
+        background-color: var(--themeColor);
+        border-color: #82aad2 #dee2e6 #fff;
+        position: relative;
+    }
+    .sensorDetails .listBox .listBody .nav-tabs .nav-link.active h4 {
+        display: inline;
+    }
+    .sensorDetails .listBox .listBody .nav-tabs .nav-link.active::after {
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: var(--themeColor);
+        transform: rotate(45deg);
+        position: absolute;
+        right: -3px;
+        top: 7px;
+        transition: 5s ease-in-out;
+        transition-delay: 1s;
+    }
+    .sensorMeasurementDetail .nav-tabs a {
+        color: var(--textColor);
+    }
+    .sensorMeasurementDetail .nav a h4 {
+        height: 30px;
+        width: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        position: relative;
+        display: none;
+    }
+    .sensorMeasurementDetail .nav a h4 i {
+        font-size: 14px;
+        color: var(--themeColor);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .sensorMeasurementDetail .nav a p {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .sensorMeasurementDetail .sensorDetail {
+        padding-left: 20px;
+    }
+    .sensorMeasurementDetail .nav-link {
+        border-radius: 0;
+        margin: 2px 0;
+        padding: 10px;
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorInfo {
+        color: var(--textColor);
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorInfo h5 {
+        font-size: 14px;
+        color: var(--textColor);
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorInfo strong {
+        color: var(--themeColor);
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorInfo p {
+        display: inline-flex;
+        color: var(--contentColor);
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorInfo span::after {
+        content: "|";
+        margin: 0 10px;
+        color: var(--contentColor);
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorGauzeMap {
+        padding: 10px;
+        border: 1px solid var(--borderColor);
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorGauzeMap p {
+        color: var(--contentColor);
+        font-size: 12px;
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorGauzeMap p strong {
+        color: var(--textColor);
+        font-size: 13px;
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorGauzeMap .colorBoxGroup .colorBox {
+        width: 12px;
+        margin-right: 10px;
+        height: 12px;
+    }
+    .sensorMeasurementDetail .sensorDetail .sensorGraph {
+        padding: 10px;
+        border: 1px solid var(--borderColor);
+    }
+    /* end SFP Detail Page */
+}

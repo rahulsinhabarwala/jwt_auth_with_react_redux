@@ -1,0 +1,101 @@
+@media only screen {
+    /* alert list */
+    .card-body.alertListBox {
+        height: auto;
+    }
+    ul.alertList {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 340px;
+        overflow-y: auto;
+    }
+    ul.alertList li {
+        padding: 10px 15px 10px 60px;
+        color: var(--textColor);
+        border-left: 5px solid transparent;
+        margin: 5px;
+        position: relative;
+        border-radius: 5px;
+        transition: all ease-in-out 0.3s;
+        background-color: var(--whiteColor);
+    }
+    ul.alertList li h4 {
+        color: var(--themeColor);
+        font-size: 13px;
+    }
+    ul.alertList li h5 {
+        margin-bottom: 2px;
+        color: var(--contentColor);
+        font-size: 12px;
+    }
+    ul.alertList li h5 strong {
+        margin-right: 5px;
+        color: var(--textColor);
+    }
+    ul.alertList li h5 span::after {
+        content: "|";
+        margin: 0 10px;
+    }
+    ul.alertList li h5 span:last-child::after {
+        display: none;
+    }
+    ul.alertList li .alertListIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    ul.alertList li .alertListIcon i {
+        color: var(--textColor);
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    ul.alertList li.lowAlertBorder {
+        border-left-color: #ffc107;
+        background-color: rgba(255, 193, 7, 0.1);
+    }
+    ul.alertList li.lowAlertBorder .alertListIcon {
+        background-color: rgba(255, 193, 7, 0.5);
+    }
+    ul.alertList li.highAlertBorder {
+        border-left-color: #ff8c1a;
+        background-color: rgba(255, 193, 7, 0.175);
+    }
+    ul.alertList li.highAlertBorder .alertListIcon {
+        background-color: rgba(255, 140, 26, 0.6);
+    }
+    ul.alertList li.lowAlarmBorder {
+        border-left-color: #ff4000;
+        background-color: rgba(255, 64, 0, 0.1);
+    }
+    ul.alertList li.lowAlarmBorder .alertListIcon {
+        background-color: rgba(255, 64, 0, 0.7);
+    }
+    ul.alertList li.highAlarmBorder {
+         border-left-color: #b32d00;
+        background-color: rgba(220, 53, 69, 0.1);
+    }
+    ul.alertList li.highAlarmBorder .alertListIcon {
+        background-color: rgba(220, 53, 69, 0.8);
+    }
+    .alertFilterBox.filterBox ul li label {
+        flex: 0 0 20%;
+        max-width: 20%;
+        font-size: 14px;
+    }
+    .alertFilterBox.filterBox ul li select.form-control {
+        flex: 0 0 80%;
+        max-width: 80%;
+        padding: 10px 15px;
+        height: 41px;
+    }
+    /* end alert list */
+}

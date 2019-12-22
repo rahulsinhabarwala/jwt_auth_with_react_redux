@@ -1,0 +1,477 @@
+
+/****************************thermostat List***************************/
+
+@media only screen {
+	ul.thermostatList {
+		list-style: none;
+	}
+	ul.thermostatList li {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+	.thermostatOuterBox{
+		position: relative;
+		padding-bottom: 20px;
+	}
+	.thermostatOuterBox .thermostatButtonGroup{
+		position: absolute;
+		bottom: 0;
+		width: 75%;
+		left:50%;
+		transform: translateX(-50%);
+		margin-bottom: -20px;
+		font-weight: 600;
+	}
+	.thermostatOuterBox .thermostatButtonGroup .viewDetails{
+		background-color: transparent;
+		border:0px;
+		color: var(--textColor);
+		text-align: left;
+		box-shadow:0 2px 2px rgba(0,0,0,.07);
+		font-weight:600;
+	}
+	.thermostatOuterBox .thermostatButtonGroup .viewDetails:hover{
+		background-color:var(--borderColor);
+		color: var(--whiteColor);
+	}
+	.thermostatOuterBox .thermostatButtonGroup .checkbox{
+		background-color: transparent;
+	}
+	.thermostatOuterBox .thermostatButtonGroup .checkbox i{
+		color:var(--textColor);
+		line-height: 25px;
+		font-size: 20px;
+	}
+	.thermostatOuterBox .thermostatButtonGroup .checkbox:hover{
+		background: linear-gradient(#7ca514,#167500);
+		box-shadow: 0 2px 2px rgba(0,0,0,.07);
+
+	}
+	.thermostatOuterBox .thermostatButtonGroup .checkbox:hover i{
+		color:var(--whiteColor);
+	}
+	.thermostatBox{
+		padding: 15px;
+		background: linear-gradient(to bottom, #fff, #A8A8A8);
+		border: 1px solid #e0dfdf;
+		box-shadow: 6px 6px 6px rgba(0,0,0,0.1);
+		border-radius: 8px;
+		width: 80%;
+		margin: 15px auto;
+	}
+	.thermostatScreen{
+		background-color: #1e1e1e;
+		border-radius: 7px;
+		padding: 25px 20px;
+	}
+	.thermostatHeader{
+		margin-bottom: 15px !important;
+	}
+	.thermostatInfo p {
+		margin-bottom: 5px;
+		color: #f2f2f2;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.thermostatInfo h4{
+		color:#d2d2d2;
+	}
+	.thermostatInfo h5 {
+		color: #e2e2e2;
+		font-size: 14px;
+	}
+	.thermostatInfo h5 strong {
+		color: #d2d2d2;
+	}
+	.thermostatInfo h5 span {
+		margin: 0 5px;
+		display: inline-block;
+	}
+	.thermostatStatus p {
+		font-size: 12px;
+		color:rgba(255,255,255,0.8);
+	}
+	.tempAdjustButtonGroup {
+		background-color: rgba(0,0,0,0.4);
+	    border-radius: 30px;
+	    border: 1px solid #1E1D1D;
+	    margin: auto;
+		padding: 10px;
+		display: inline-block;
+	}
+	.tempAdjustButtonGroup button{
+		background-color: #252525;
+		border-radius: 50%;
+		width: 42px;
+		height: 42px;
+		border: 0;
+		text-align: center;
+	}
+	.tempAdjustButtonGroup button:hover {
+		background-color: rgba(255,255,255,0.2);
+	}
+	.tempAdjustButtonGroup button i{
+		font-size: 20px;
+		color: #c3c3c3;
+		line-height: 42px;
+	}
+	.tempAdjustButtonGroup p{
+		color: #a8a8a8;
+		font-size: 15px;
+		margin: 10px 0;
+		padding: 0;
+		font-weight: 600;
+	}	
+	.tempDisplay{
+		text-align: center;
+	}
+	.tempDisplay p{
+		color: #a9a595;
+		text-transform: capitalize;
+		margin: 0;
+		font-size: 14px;
+	}
+	.tempDisplay h1{
+		color:#d5d5d5;
+		font-size: 90px;
+		font-weight: 800;
+		position: relative;
+		margin: 0;
+		font-family: sans-serif !important;
+	}
+	.tempDisplay span{
+		font-size: 30px;
+		position: absolute;
+		top: 25px;
+	}
+	.thermostatFooter .btn{
+		margin: 0 5px;
+		color: #fff;
+		font-size: 12px;
+		width: 90%;
+		font-weight: 600;
+		transition: 0.1s linear;
+		border-radius: 25px;
+		text-transform: capitalize;
+	}
+	.thermostatFooter .btn:hover{
+		transform: translateY(-2px);
+	}
+	.customBtnBlue{
+		background: linear-gradient(#30d5c3,#0a3c70);
+		color: rgba(255,255,255,0.8);
+		box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+		border: 0;
+	}
+	.customBtnRed{
+		background: linear-gradient(#e52a00,#c81739);
+		color: rgba(255,255,255,0.8);
+		box-shadow: 0 0 0 .2rem rgba(243, 106, 62, 0.3);
+		border: 0;
+	}
+	.customBtnGreen{
+		background: linear-gradient(#89b320,#258b0f);	
+		color: rgba(255,255,255,0.8);
+		box-shadow: 0 0 0 .2rem rgba(121, 243, 62, 0.3);
+		border: 0;
+	}	
+}
+/****************************thermostat List end***************************/
+/****************************Thermostat Details***************************/
+@media only screen {
+	.deviceDetails {
+		padding: 20px;
+		margin: 0 20px !important;
+	}
+	.deviceDetails ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.deviceDetails ul li{
+		padding: 10px 0;
+		flex: 1 1 100%;
+		margin: 5px 0;
+		box-shadow: 0 3px 3px rgba(0,0,0,.07);
+		background-color: #fff;
+		border-radius: 5px;
+		position: relative;
+	}
+	.deviceDetails ul li:hover{
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+	}
+	.deviceDetails .deviceName{
+		border-bottom: 1px solid #e9e9e9;
+	}
+	.deviceDetails .deviceName p{
+		color: #535353;
+		font-weight: 600;
+		padding-bottom: 5px;
+	}
+	.deviceName button i{
+		font-size: 15px;
+		color:#534d4d;
+		margin-left: 5px;
+		cursor: pointer;
+	}
+	.deviceDetails ul li h4{
+		text-align: center;
+		color: rgb(30, 109, 150);
+		font-size: 1.5rem;
+		border-right: 1px solid #dadada;
+		margin: 0 5px auto;
+		font-size: 20px;
+	}
+	.deviceDetails ul li h6{
+		font-size: 14px;
+		color: #545454;
+	}
+	.deviceDetails ul li p{
+		font-size: 12px;
+		letter-spacing: 1px;
+		color: #014fa1;
+	}
+	.deviceFunButtons{
+		padding: 20px;
+		display: none !important;
+	}
+	.deviceFunButtons .btn{
+		color: #fff;
+		margin: 0 5px;
+		font-size: 14px;
+		box-shadow: 2px 2px 5px #848484;
+	}
+	.thermostatDetails .card{
+		margin-bottom: 20px;
+		border:0px;
+		box-shadow:0 3px 3px rgba(0,0,0,.07);	
+	}
+	.thermostatDetails .card-header{
+		background: #e3edf3e6;
+		font-size: 16px;
+		color: #014fa1;
+	}
+	.thermostatDetails .energyDetails .form-group {
+		margin-bottom: 30px;
+	}
+	.thermostatDetails .energyDetails form input{
+		width: 90% !important;
+	}
+	.thermostatDetails .energyDetails form .input-group-append span{
+		width: 10% !important;
+		position: absolute;
+		right: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		font-size: 12px;
+		font-weight: 600;
+		background-color: #e5eef4;
+	}
+	.thermostatDetails form small{
+		color:#227ccf;
+		padding: 0 0 0 10px;
+		position: absolute;
+		bottom: -15px;
+	}
+	.sheduleShowcase fieldset{
+		border: 1px solid rgb(235, 230, 230);
+		background-color: rgb(243, 243, 243);;
+		box-shadow: 0 3px 3px rgba(0,0,0,.07);
+		margin: 20px;
+	}
+	.sheduleShowcase legend{
+		font-size: 15px;
+		width: max-content;
+		color:#5d687e;
+		font-weight: 600;
+		padding-left: 10px;
+	}
+	.scheduleDetailsBlock .innerBlock{
+		padding-left: 10px;
+		border-right: 1px solid #dadada;
+		text-align: center;
+	}
+	.scheduleDetailsBlock p{
+		margin: 0;
+		color: 150505;
+		height: auto;
+		font-size: 13px;
+		color: #5d687e;
+		text-transform: capitalize;
+	}
+	.scheduleDetailsBlock p:nth-child(1){
+	    color: #1e6d96;
+		margin: 0 10px 5px 0;
+		padding: 5px 0;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+	.sheduleShowcase .btnGroup{
+		text-align: center;
+		align-self: center;
+	}
+	.sheduleShowcase .btnGroup button{
+		text-transform: capitalize !important;
+		margin: 0 5px !important;
+	}
+
+	/*****add schedlude*/
+	/* .newScheduleName{
+		position: relative;
+	}
+	.newScheduleName input:focus{
+		box-shadow: 0 0 0 transparent;
+		transition: .001s ease-in-out;
+	}
+	.newScheduleName label{
+		margin: 0;
+		position: absolute;
+		color: gray;
+		left: 5px;
+		transition: .001s ease-in-out;
+		font-size: 14px;
+	}
+	.newScheduleName input[type=text]:focus + label{
+		top:-10px;
+		color: #014fa1;
+		font-size: 12px;
+		background-color: #fff;
+	}
+	.dayBlock{
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+	.dayName {
+		background:rgb(40, 131, 154);
+		color: #fff;
+		position: relative;
+	}
+	.dayName p{
+		transform: translate(-50%,-50%) rotate(-90deg);
+		position: absolute;
+		top:50%;
+		left: 50%;
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	ul.tempAdjust{
+		margin: 0;
+		background: #fff;
+		box-shadow: 0 3px 3px rgba(0,0,0,.07);
+		padding: 15px 0;
+		text-align: center;
+	}
+	ul.tempAdjust li{
+		list-style: none;
+		justify-content: center;
+		border-right:1px solid rgb(214, 214, 214);
+	}
+	ul.tempAdjust li:nth-child(4){
+		border-right: 0px;
+	}
+	ul.tempAdjust li h5{
+		font-size: 16px;
+		font-weight: 600;
+		color:#424242;
+	}
+	ul.tempAdjust li div{
+		justify-content: center !important;
+		align-items: center;
+	}
+	ul.tempAdjust .flex-item button{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 0;
+		background-color:rgb(179, 179, 179);
+		position: relative;
+		margin: 0 5px;
+	}
+	ul.tempAdjust .flex-item p{
+		font-weight: 600;
+		color: gray;
+		margin:0;
+		font-size: 16px;
+	}
+	ul.tempAdjust .flex-item button i{
+		font-size: 12px;
+		color: #fff;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		top:50%;
+		left: 50%;
+
+	} */
+	}
+/****************Thermostst Details end*****************/	
+
+/*****************Thermostat form page*****************/
+
+@media only screen{
+	.thermostatForm {
+		width: 75%;
+		margin: 0 auto;
+	}
+	.thermostatForm .card{
+		margin-bottom: 20px;
+		border:0px;
+		box-shadow:0 3px 3px rgba(0,0,0,.07);	
+	}
+	.thermostatForm .card-header{
+		background: #e3edf3e6;
+		font-size: 16px;
+		color: #014fa1;
+	}
+	.thermostatForm h6{
+		color: #014fa1;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.thermostatForm table.external tr td.w-45{
+		width: 45% !important;
+	}
+	.thermostatForm table.external tr td.w-10{
+		width: 10% !important;
+	}
+}
+/************thermostat form end*******************/
+/************thermostat Comparision********************/
+@media only screen{
+	.thermostatComparision{
+		width: 80%;
+		margin: auto;
+		padding: 20px 0;
+	}
+	.thermostatComparision h6{
+		text-align: center;
+		font-size: 16px;
+		color: rgb(82, 82, 82);
+	}
+	.thermostatComparision .energyComp ul{
+		padding: 0;
+		margin: 0 0 10px 0;
+	}
+	.thermostatComparision .energyComp ul li{
+		list-style: none;
+		margin: 0 3px;
+		color: #484949;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.thermostatComparision .energyComp ul li Button{
+		padding: 5px 10px;
+		text-transform: capitalize;
+	}
+	.thermostatComparision .energyComp ul li:nth-child(2){
+		margin-left: auto;
+	}
+	.graphContainer{
+		background-color: rgba(0,0,0,0.1);
+		width: 100%;
+		height: 90%;
+	}	
+}
+/************thermostat Comparision end********************/
