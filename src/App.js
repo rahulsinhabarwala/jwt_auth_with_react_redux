@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Redirect, } from 'react-router-dom'
-import { createBrowserHistory } from "history";
 import Homepage from './components/HomePage/Homepage';
 import Login from './components/Login/Login';
 import Signup from './components/SignUp/Signup';
 import jwt from 'jsonwebtoken';
-import NotFoundPage from './components/NotFoundPage/NotFoundPage'
 import './assets/css/newCss/customReactTable.css';
-const history = createBrowserHistory();
 
 class App extends Component {
   state = {
@@ -60,7 +57,6 @@ class App extends Component {
       }/>
           <Route path="/Signup" exact strict render={(props) => !this.state.isLoggedIn ? <Signup {...props} signupHandel={this.signupHandel}/> : (<Redirect to='/'/>)
       }/>
-         { /* <Route component={NotFoundPage} /> */ }
       </Router>
     )
   }

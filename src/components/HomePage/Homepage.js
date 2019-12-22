@@ -53,14 +53,14 @@ export default class homepage extends Component {
       <Fragment>
             <Navbar/>
             <ReactTable
-      data={this.state.countryList}
-      columns={columns}
-      defaultPageSize = {10}
-      pageSizeOptions = {[10, 15, 20]}
-      className="customReactTable"
-      loading={ this.state.isLoading }
-      noDataText={this.state.errorWhileFetch && 'There is an error in API call.' }
-      /> 
+              data={this.state.countryList}
+              columns={columns}
+              defaultPageSize = {10}
+              pageSizeOptions = {[10, 15, 20]}
+              className="customReactTable"
+              loading={ this.state.isLoading }
+              noDataText={this.state.errorWhileFetch && 'There is an error in API call.' }
+           /> 
       </Fragment>
     )
   }
