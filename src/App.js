@@ -36,32 +36,16 @@ class App extends Component {
     }
   }
 
-  loginHandle = (userName,userPassword) => {
-    console.log('localStorage.userDataList', localStorage.userDataList)
-    if(localStorage.userDataList){
-      let userDataList = JSON.parse(localStorage.userDataList)
-        let userExist = userDataList.map((item) => 
-      item.userName === userName && item.userPassword === userPassword ?  item : null )
-      if(userExist){
-        let token = jwt.sign({
-          data: userExist
-        }, 'secret', { expiresIn: 60 * 60 });
-        localStorage.token = token
-        }
-        this.setState({isLoggedIn: true})
-    } else{
-      alert("sign-in first")
-      // this.props.history.push("/signin")
-    }
+  loginHandle = (isLoggedIn) => {
+    this.setState({isLoggedIn})
   }
 
   signupHandel = (userName,userPassword) => {
-    console.log('userName', userName)
     let userDataList = JSON.parse(JSON.stringify(this.state.userDataList))
     let userData = {userName,userPassword}
     userDataList.push(userData); 
-    console.log('userDataList', userDataList)
     localStorage.userDataList = JSON.stringify(userDataList)
+    this.props.history.push("/Login")
   }
 
   render() {
@@ -76,6 +60,7 @@ class App extends Component {
           <Route path="/Signup" exact strict render={(props) =>
             !this.state.isLoggedIn ? <Signup {...props} signupHandel={this.signupHandel}/> : (<Redirect to='/'/>)
           }/>
+         {/* <Route component={NotFoundPage} /> */}
       </Router>
     )
   }

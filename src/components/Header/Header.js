@@ -13,7 +13,8 @@ export default class Header extends Component {
         console.log('decoded', decoded)
         return (
             <nav className="navbar navbar-light" onClick={this.logoutHandler} style={{"background-color": "#e3f2fd"}}>
-                <a className="navbar-brand" href="">Logout</a>
+                <span className='user-name'></span>
+                <a className="navbar-brand" href=""><span>Logout</span></a>
             </nav>
         )
     }

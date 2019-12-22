@@ -22,6 +22,7 @@ export default class homepage extends Component {
       }
       
     render() {
+      console.log('this.props', this.props)
          const columns = [{  
           Header: 'Name',  
           accessor: 'name'  
@@ -54,7 +55,7 @@ export default class homepage extends Component {
                 pageSizeOptions = {[10,15,20]}  
                 className="customReactTable"
                 loading={ this.state.isLoading }
-                noDataText={this.state.errorWhileFetch ? 'There is an error in API call.': "" }
+                noDataText={this.state.errorWhileFetch && 'There is an error in API call.' }
                 /> 
           </Fragment>      
         )
