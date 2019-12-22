@@ -37,11 +37,9 @@ class App extends Component {
   }
 
   loginHandle = (userName,userPassword) => {
+    console.log('localStorage.userDataList', localStorage.userDataList)
     if(localStorage.userDataList){
       let userDataList = JSON.parse(localStorage.userDataList)
-      console.log('localStorage.userDataList', localStorage.userDataList)
-      if(userDataList.length > 0){
-        console.log('userDataList', userDataList)
         let userExist = userDataList.map((item) => 
       item.userName === userName && item.userPassword === userPassword ?  item : null )
       if(userExist){
@@ -51,9 +49,6 @@ class App extends Component {
         localStorage.token = token
         }
         this.setState({isLoggedIn: true})
-      }else{
-        alert("sign-in first")
-      }
     } else{
       alert("sign-in first")
       // this.props.history.push("/signin")
@@ -61,9 +56,11 @@ class App extends Component {
   }
 
   signupHandel = (userName,userPassword) => {
+    console.log('userName', userName)
     let userDataList = JSON.parse(JSON.stringify(this.state.userDataList))
     let userData = {userName,userPassword}
     userDataList.push(userData); 
+    console.log('userDataList', userDataList)
     localStorage.userDataList = JSON.stringify(userDataList)
   }
 

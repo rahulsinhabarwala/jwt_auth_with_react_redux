@@ -54,7 +54,7 @@ export default class homepage extends Component {
                 pageSizeOptions = {[10,15,20]}  
                 className="customReactTable"
                 loading={ this.state.isLoading }
-                noDataText={this.state.errorWhileFetch ? 'There is an error in API call.':""}
+                noDataText={this.state.errorWhileFetch ? 'There is an error in API call.': "" }
                 /> 
           </Fragment>      
         )

@@ -16,7 +16,7 @@ handleSubmit = () => {
 }
 render() {
     return (
-        <div class="log-form">
+        <div className="log-form">
         <section>
             name:<input placeholder='enter name' name="userName"  value={this.state.userName} onChange={this.onChange}/>
             password:<input placeholder='enter password' name="userPassword" value={this.state.userPassword} onChange={this.onChange}/>

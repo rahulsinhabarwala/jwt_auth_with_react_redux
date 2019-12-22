@@ -16,8 +16,9 @@ export default class Signup extends Component {
         if(this.state.userPassword === this.state.confirmUserPassword){
             this.setState({
                 isLoginInitiated: true,
-            }, () => {this.props.signupHandel(this.state.userName, this.state.userPassword)})
-            this.props.history.push("/Login")
+            })
+            this.props.signupHandel(this.state.userName, this.state.userPassword)
+            // this.props.history.push("/Login")
         }else{
             this.setState({errorMessage: "password not match"})
         }
