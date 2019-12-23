@@ -42,7 +42,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <article className="log-form">
+    <article className="log-form">
+        <h2 className='page-heading'>Login</h2>
             <form className="form-horizontal">
                 <div className="form-group">
                     <label className="control-label col-sm-2" htmlFor="email">UserName:</label>

@@ -9,9 +9,7 @@ export default class Signup extends Component {
     errorMessage: ""
   }
 
-  onChange = e => this.setState({
-    [e.target.name]: e.target.value
-  })
+  onChange = e => this.setState({[e.target.name]: e.target.value})
 
   handelError = () => {
     let errorMessage
@@ -40,11 +38,13 @@ export default class Signup extends Component {
             alert("user already exists")
             this.props.history.push("/Login")
           } else {
+            alert("Sign-up succssfully")
             this.props.signupHandel(this.state.userName, this.state.userPassword)
             setTimeout(() => this.props.history.push("/Login"), 500)
           }
         })
       } else {
+        alert("Sign-up succssfully")
         this.props.signupHandel(this.state.userName, this.state.userPassword)
         setTimeout(() => this.props.history.push("/Login"), 500)
       }
@@ -56,6 +56,7 @@ export default class Signup extends Component {
   render() {
     return (
       <article className="log-form">
+        <h2 className='page-heading'>Sign up</h2>
                 <form className="form-horizontal">
                     <div className="form-group">
                         <label className="control-label col-sm-2" htmlFor="email">UserName:</label>
@@ -82,8 +83,8 @@ export default class Signup extends Component {
                         </div>
                 </form>
                 {this.state.errorMessage &&
-      <div className='login-error'><span>{this.state.errorMessage}</span></div>
-      }
+                  <div className='login-error'><span>{this.state.errorMessage}</span></div>
+                }
             </article>
     )
   }

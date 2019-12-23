@@ -1,20 +1,31 @@
-.log-form{
-  width: 100vw;
-  height: 100vh;
+.log-form {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
 }
-.log-form input{
- width: 30em 
+
+.page-heading {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 60px;
 }
-button{
-  margin-left:10px;
+
+.log-form input {
+    width: 30em;
 }
-form{
-  width: 50em;
-  margin: 0 auto;
-  margin-top: 100px;
+
+button {
+    margin-right: 10px;
+    box-shadow: none;
 }
-.login-error{
-  margin-top: 20px;
+
+form {
+    width: 40em;
+    margin: 0 auto;
+}
+
+.login-error {
+    margin-top: 50px;
     color: red;
     text-align: center;
     width: 50em;
@@ -22,19 +33,48 @@ form{
     padding: 10px;
     font-size: 19px;
 }
-.login-error span{
-  padding: 10px;
-  background: rgb(223, 84, 84);
-  color: white;
-  border-radius: 10px;
+
+.login-error span {
+    padding: 10px;
+    background: rgb(223, 84, 84);
+    color: white;
+    border-radius: 10px;
 }
-.navbar{
-  display: flex;
-  justify-content:space-between;
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #e3f2fd
 }
-.navbar-brand span{
-  color: white;
+
+.navbar-brand span {
+    color: white;
     padding: 5px 10px;
     border-radius: 10px;
     background: orangered;
+    transition: 0.3s all;
+}
+
+.navbar-brand span:hover {
+    background: white;
+    color: black;
+    font-weight: 600;
+    border: 1px solid gray;
+}
+
+.navbar .user-name {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pagination-bottom {
+    margin-top: 30px;
+}
+
+.pagination-bottom button.-btn {
+    box-shadow: none;
 }
